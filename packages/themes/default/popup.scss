@@ -1,0 +1,129 @@
+
+.gt-popup{
+  position: fixed;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+.gt-popup-middle{
+  width: 200px;
+  border-radius: 8px;
+  padding: 10px;
+  transform: translate(-50%);
+  &:after{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    border-width: 10px;
+    border-bottom-color: #fff;
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 50px;
+  }
+}
+.gt-popup-top {
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  background-color: rgba(0,0,0,.7);
+  backface-visibility: hidden;
+  transform: translate3d(-50%,0,0);
+}
+.gt-popup-right {
+  top: 50%;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0,-50%,0);
+}
+.gt-popup-bottom {
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  backface-visibility: hidden;
+  transform: translate3d(-50%,0,0);
+}
+.gt-popup-left{
+  top: 50%;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  transform: translate3d(0,-50%,0);
+}
+/**
+*遮罩层
+**/
+.v-modal-enter {
+  animation: v-modal-in .2s ease;
+}
+
+.v-modal-leave {
+  animation: v-modal-out .2s ease forwards;
+}
+
+@keyframes v-modal-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+  }
+}
+
+@keyframes v-modal-out {
+  0% {
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.v-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: #000;
+}
+
+.gt-popup-slide-top-enter,
+.gt-popup-slide-top-leave-active {
+  transform: translate3d(-50%, -100%, 0);
+}
+.gt-popup-slide-right-enter,
+.gt-popup-slide-right-leave-active {
+  transform: translate3d(100%, -50%, 0);
+}
+.gt-popup-slide-bottom-enter,
+.gt-popup-slide-bottom-leave-active {
+  transform: translate3d(-50%, 100%, 0);
+}
+.gt-popup-slide-left-enter,
+.gt-popup-slide-left-leave-active {
+  transform: translate3d(-100%, -50%, 0);
+}
+.gt-popup-fade-enter,
+.gt-popup-fade-leave-active {
+  opacity: 0;
+}
