@@ -2,7 +2,7 @@
   "name": "vue",
   "version": "1.0.0",
   "description": "my is vue.js",
-  "author": "vhen",
+  "author": "dyw",
   "private": true,
   "scripts": {
     "dev": "nodemon --watch build --watch config build/dev-server.js",
